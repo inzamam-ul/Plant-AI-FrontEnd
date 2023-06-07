@@ -9,7 +9,7 @@ const ChatHeader = ({ showDialog }) => {
       <Appbar.Header type="small">
         <Appbar.Action
           icon="chevron-left"
-          color="#B7F4D8"
+          color="#A7F9A8"
           size={40}
           marginLeft={-20}
           onPress={() => navigation.navigate("Home")}
@@ -19,7 +19,7 @@ const ChatHeader = ({ showDialog }) => {
           style={{
             fontWeight: 800,
             fontSize: 30,
-            color: "#B7F4D8",
+            color: "#A7F9A8",
             marginLeft: -30,
           }}
         >
@@ -28,7 +28,7 @@ const ChatHeader = ({ showDialog }) => {
         <Appbar.Content />
 
         <Appbar.Action
-          color="#B7F4D8"
+          color="#A7F9A8"
           size={40}
           icon="dots-vertical"
           onPress={showDialog}

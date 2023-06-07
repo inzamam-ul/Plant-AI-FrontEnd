@@ -12,18 +12,35 @@ const AboutModal = ({ showDialog, hideDialog, visible, setVisible }) => {
           visible={visible}
           onDismiss={hideDialog}
         >
-          <Dialog.Title style={{ color: "#B7F4D8", fontWeight: "bold" }}>
+          <Dialog.Title style={{ color: "#000", fontWeight: "bold" }}>
             About
           </Dialog.Title>
           <Dialog.Content>
-            <Text variant="bodyMedium">This is simple dialog</Text>
+            <Text variant="bodyMedium">
+              The project develops a mobile-based system for automated plant
+              disease diagnosis using computer vision and machine learning. Its
+              goal is to provide farmers with an efficient tool for managing
+              crop diseases and optimizing agricultural practices.
+            </Text>
+            <View
+              style={{
+                display: "flex",
+                flexDirection: "row",
+                marginTop: 5,
+              }}
+            >
+              <Text style={{ color: "red" }} variant="bodyMedium">
+                Developed By:{" "}
+              </Text>
+              <Text variant="bodyMedium">Md Inzamamul Haque</Text>
+            </View>
           </Dialog.Content>
           <Dialog.Actions>
             <Button
               style={{ borderRadius: 5 }}
               textColor="white"
               rounded={false}
-              buttonColor="#B7F4D8"
+              buttonColor="#A7F9A8"
               onPress={hideDialog}
             >
               Close

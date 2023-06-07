@@ -11,15 +11,16 @@ const theme = {
   ...DefaultTheme,
   colors: {
     ...DefaultTheme.colors,
-    primary: "tomato",
-    secondary: "yellow",
+    primary: "#3498db",
+    secondary: "#f1c40f",
+    primaryContainer: "red",
+    secondaryContainer: "white",
   },
 };
 
 export default function App() {
   const isLoadingComplete = useCachedResources();
   const colorScheme = useColorScheme();
-
   if (!isLoadingComplete) {
     return null;
   } else {

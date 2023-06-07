@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
     height: 380,
     // borderRadius: 18,
     borderWidth: 5,
-    borderColor: "#B7F4D8",
+    borderColor: "#A7F9A8",
     boxSizing: "border-box",
   },
   image: {

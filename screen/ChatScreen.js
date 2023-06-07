@@ -4,7 +4,9 @@ import React, { useEffect, useRef, useState } from "react";
 import {
   FlatList,
   Image,
+  KeyboardAvoidingView,
   LayoutAnimation,
+  Platform,
   StyleSheet,
   Text,
   TextInput,
@@ -121,7 +123,11 @@ const ChatScreen = () => {
   );
 
   return (
-    <View style={styles.container}>
+    <KeyboardAvoidingView
+      enabled
+      behavior={Platform.OS === "ios" ? undefined : undefined}
+      style={styles.container}
+    >
       <FlatList
         ref={flatListRef}
         data={messages}
@@ -133,7 +139,12 @@ const ChatScreen = () => {
         }
         // inverted
       />
-      <View style={styles.inputContainer}>
+      <View
+        style={{
+          ...styles.inputContainer,
+          marginBottom: Platform.OS === "ios" ? 35 : 0,
+        }}
+      >
         <TextInput
           style={styles.input}
           value={message}
@@ -151,7 +162,7 @@ const ChatScreen = () => {
         visible={visible}
         setVisible={setVisible}
       />
-    </View>
+    </KeyboardAvoidingView>
   );
 };
 
@@ -239,7 +250,7 @@ const styles = StyleSheet.create({
     marginRight: 10,
   },
   sendButton: {
-    backgroundColor: "#B7F4D8",
+    backgroundColor: "#A7F9A8",
     borderRadius: 20,
     paddingHorizontal: 20,
     paddingVertical: 10,
